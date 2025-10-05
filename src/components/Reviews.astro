@@ -1,0 +1,33 @@
+---
+import TestimonialsCarousel from "../components/Reviews.jsx";
+---
+
+<section
+  class="py-16 bg-gradient-to-r from-pink-100 to-purple-100 relative font-bricolage"
+>
+  <div
+    class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+  >
+    <!-- SEO-friendly static left part -->
+    <div class="text-center md:text-left">
+      <h2 class="text-2xl font-bold">EXCELLENT</h2>
+      <div class="flex justify-center md:justify-start my-2">
+        <!-- Static stars for SEO -->
+        <span class="text-yellow-400 text-xl">★★★★★</span>
+      </div>
+      <p class="text-gray-600">
+        Based on <span class="font-bold">1125 reviews</span>
+      </p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+        alt="Google"
+        class="w-20 mt-2 mx-auto md:mx-0"
+      />
+    </div>
+
+    <!-- React-only interactive carousel -->
+    <div class="flex-1 w-full">
+      <TestimonialsCarousel client:only="react" />
+    </div>
+  </div>
+</section>

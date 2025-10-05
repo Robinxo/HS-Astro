@@ -1,16 +1,20 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import PromoCarousel from "../components/Promotion.jsx";
+import Reviews from "../components/Reviews.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <head>
+    <title>Tanvi Premium Hotels & Resort | Luxury Stay in Gurugram</title>
+    <meta
+      name="description"
+      content="Discover Tanvi Premium Hotels & Resort in Gurugram. Premium & deluxe rooms, resort in Aravali Hills with pool & cafe, plus banquet hall for events."
+    />
+  </head>
+
+  <HeroSection />
+  <Reviews />
+  <PromoCarousel client:only="react" />
+</BaseLayout>

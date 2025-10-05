@@ -1,0 +1,432 @@
+---
+import Divider1 from "../SVG/Divider1.jsx";
+import Divider2 from "../SVG/Divider2.jsx";
+
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+
+const Cafeimages = [
+  { src: "/Resort/Cafe/Cafe(1).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(2).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(3).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(4).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(5).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(6).png", alt: "Garden Resort - Cafe" },
+  { src: "/Resort/Cafe/Cafe(7).png", alt: "Garden Resort - Cafe" },
+];
+
+const Poolimages = [
+  { src: "/Resort/Poolside/Pool(1).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(2).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(3).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(4).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(5).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(6).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(7).png", alt: "Garden Resort - Poolside" },
+  { src: "/Resort/Poolside/Pool(8).png", alt: "Garden Resort - Poolside" },
+];
+
+const BanquetImages = [
+  {
+    src: "/Banquet/Banquet(1).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(2).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(3).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(4).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(5).png",
+    alt: "Garden Resort",
+  },
+];
+
+const Deluxeimages = [
+  { src: "/Rooms/Deluxe/Deluxe(1).png", alt: "Deluxe Room" },
+  { src: "/Rooms/Deluxe/Deluxe(2).png", alt: "Deluxe Room" },
+  { src: "/Rooms/Deluxe/Deluxe(3).png", alt: "Deluxe Room" },
+];
+
+const Premiumimages = [
+  { src: "/Rooms/Premium/Premium(1).png", alt: "Premium Room" },
+  { src: "/Rooms/Premium/Premium(2).png", alt: "Premium Room" },
+  { src: "/Rooms/Premium/Premium(3).png", alt: "Premium Room" },
+];
+---
+
+<!-- Hero -->
+<section
+  class="relative flex flex-col items-center justify-center text-white flex-1 bg-cover bg-top min-h-[calc(100vh-64px)]"
+  style="background-image: url('/bg.jpg');"
+>
+  <div
+    class="relative z-10 text-center px-4 sm:px-6 md:px-8 py-12 font-bricolage"
+  >
+    <h2
+      class="text-4xl md:text-6xl font-bold text-yellow-400 drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)]"
+    >
+      TANVI GROUP
+    </h2>
+    <h1
+      class="text-6xl md:text-9xl font-extrabold text-yellow-400 drop-shadow-[4px_2px_0px_rgba(0,0,0,0.8)] mb-4"
+    >
+      Hotels & Resort
+    </h1>
+    <p class="block text-lg md:text-xl max-w-4xs mx-auto mt-4 text-yellow-400">
+      At <strong>Tanvi Premium</strong>, we offer more than just a place to stay
+      — we create experiences defined by comfort, care, and heartfelt
+      hospitality. Whether you're traveling for business or leisure, our
+      commitment is to make every moment memorable.
+      <br /><br />
+      <em>— Director, Tanvi Premium Hotel & Resort</em>
+    </p>
+    <div
+      class="w-24 md:w-60 h-1 bg-yellow-400 mx-auto mb-8 drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)]"
+    >
+    </div>
+    <a
+      href="/booking"
+      class="bg-yellow-400 text-[#0B1A33] font-bold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition inline-block"
+    >
+      Book your stay now
+    </a>
+  </div>
+</section>
+
+<div class="min-h-64 bg-[#0a1a36] flex flex-col items-center relative">
+  <!-- Hotel Section -->
+  <div
+    class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center"
+  >
+    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+      <h1
+        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+      >
+        TANVI GROUP HOTEL
+      </h1>
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center"
+  >
+    <!-- Premium Room -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper
+            options={{
+              autoplay: { delay: 2000, disableOnInteraction: false },
+              loop: true,
+            }}
+          >
+            <SwiperWrapper>
+              {
+                Premiumimages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">PREMIUM ROOM</p>
+        <div class="text-sm sm:text-base mt-1 px-2 text-left">
+          <p>
+            Indulge in the ultimate luxury with our Premium Rooms, offering
+            unmatched comfort and sophisticated style.
+          </p>
+        </div>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+
+    <!-- Deluxe Room -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper
+            options={{
+              autoplay: { delay: 2000, disableOnInteraction: false },
+              loop: true,
+            }}
+          >
+            <SwiperWrapper>
+              {
+                Deluxeimages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">DELUXE ROOM</p>
+        <div class="text-sm sm:text-base mt-1 px-2 text-left">
+          <p>
+            Unwind in the spacious and elegantly designed Deluxe Rooms, where
+            comfort meets modern sophistication.
+          </p>
+        </div>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <Divider1 client:load />
+
+  <!-- Resort Section -->
+  <div
+    class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center"
+  >
+    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+      <h1
+        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+      >
+        TANVI GROUP RESORT
+      </h1>
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center"
+  >
+    <!-- Resort -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
+            <SwiperWrapper>
+              {
+                Poolimages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">RESORT</p>
+        <ul
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+        >
+          <li>Escape to paradise where luxury meets nature.</li>
+          <li>Indulge in tranquility and adventure at our resort.</li>
+        </ul>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+
+    <!-- Cafe -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
+            <SwiperWrapper>
+              {
+                Cafeimages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">CAFE</p>
+        <ul
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+        >
+          <li>Savor every sip with panoramic views of the Aravalli Hills.</li>
+          <li>
+            Nestled in the heart of the Aravallis, our open-view cafe offers a
+            taste of serenity.
+          </li>
+        </ul>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <Divider2 client:load />
+
+  <!-- Banquet Section -->
+  <div
+    class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center"
+  >
+    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+      <h1
+        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+      >
+        TANVI GROUP BANQUET
+      </h1>
+      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      ></span>
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center"
+  >
+    <!-- Banquet Halls -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
+            <SwiperWrapper>
+              {
+                BanquetImages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">BANQUET HALLS</p>
+        <ul
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+        >
+          <li>
+            Host your next meeting or gathering in our elegant banquet hall.
+          </li>
+          <li>Perfect for intimate meetings and small gatherings.</li>
+        </ul>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+
+    <!-- Rooftop Banquet -->
+    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+      <div
+        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+      >
+        <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
+          <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
+            <SwiperWrapper>
+              {
+                BanquetImages.map((image) => (
+                  <SwiperSlide>
+                    <div class="w-full h-[468px] overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </SwiperWrapper>
+          </Swiper>
+        </div>
+        <p class="text-lg sm:text-xl font-bold text-left mt-3">
+          ROOFTOP BANQUET
+        </p>
+        <ul
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+        >
+          <li>
+            Enjoy breathtaking rooftop views in a vibrant open-air atmosphere.
+          </li>
+          <li>
+            Celebrate in an elegant rooftop setting that blends style and
+            exclusivity.
+          </li>
+        </ul>
+        <a
+          href="/booking/rooms"
+          class="bg-yellow-400 text-[#0B1A33] px-6 sm:px-9 py-2 rounded-full font-bold hover:bg-yellow-300 mt-4 inline-block"
+          >Visit</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

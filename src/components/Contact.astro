@@ -1,0 +1,103 @@
+---
+import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
+---
+
+<section
+  class="text-yellow-400 px-6 pt-15 py-86 md:px-16 lg:px-24"
+  style="background-image: url('/bgcontact.png'); background-size: cover; background-position: center;"
+>
+  <div class="mb-10 font-bricolage text-center">
+    <h2 class="text-2xl md:text-4xl font-bold">
+      TANVI GROUP&apos;s
+      <span class="block text-3xl md:text-5xl text-yellow-300">
+        Hotels & Resorts
+      </span>
+    </h2>
+    <p class="italic text-gray-300 mt-2 text-sm md:text-base">
+      "We&apos;re here to help make your stay unforgettable!"
+    </p>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="space-y-8 max-w-2xl text-left">
+    <!-- Phone -->
+    <div class="flex items-start gap-4">
+      <Phone class="w-6 h-6 text-yellow-400 flex-shrink-0" />
+      <div>
+        <h3 class="font-semibold text-lg">Phone:</h3>
+        <p class="text-gray-200">
+          Call us anytime at
+          <a href="tel:+919821841112" class="underline"> +91 9821841113 </a>
+        </p>
+        <p class="text-sm text-yellow-500">We&apos;re available 24/7</p>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex items-start gap-4">
+      <Mail class="w-6 h-6 text-yellow-400 flex-shrink-0" />
+      <div>
+        <h3 class="font-semibold text-lg">Email:</h3>
+        <p class="text-gray-200">
+          For inquiries or reservations, email us at
+          <a
+            href="mailto:tanvipremiumgroup@gmail.com"
+            class="underline text-yellow-300"
+          >
+            tanvipremiumgroup@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="flex items-start gap-4">
+      <Instagram class="w-6 h-6 text-yellow-400 flex-shrink-0" />
+      <div>
+        <h3 class="font-semibold text-lg">Instagram:</h3>
+        <p class="text-gray-200">
+          Follow us here
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="underline text-yellow-300"
+          >
+            @tanvipremiumgroup
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="flex items-start gap-4">
+      <MapPin class="w-6 h-6 text-yellow-400 flex-shrink-0" />
+      <div>
+        <h3 class="font-semibold text-lg">Hotel address:</h3>
+        <p class="text-gray-200 font-bold text-2xl">TAJ PREMIUM RESIDENCY</p>
+        <p class="text-gray-200">
+          Plot No 38, Block C, Uday Nagar, Sector 45, Gurugram, Haryana 122001
+        </p>
+        <a
+          href="https://maps.app.goo.gl/C5jaP8shxVBvjhZg9"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block mt-1 underline text-yellow-300"
+        >
+          Find us near ISKCON Temple Gurugram Sec-45
+        </a>
+
+        <h3 class="font-semibold text-lg mt-4">Resort address:</h3>
+        <p class="text-gray-200 font-bold text-2xl">WILD VIEW CAFE</p>
+        <p class="text-gray-200">Garat Pur Bas, Gurugram, Haryana 122001</p>
+        <a
+          href="https://maps.app.goo.gl/t8ogxPhSt3KScoda9"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block mt-1 underline text-yellow-300"
+        >
+          Find us here
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

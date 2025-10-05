@@ -1,0 +1,108 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+
+const Resortimages = [
+  { src: "/Resort/Cafe/Cafe(1).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(1).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(2).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(2).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(3).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(3).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(4).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(4).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(5).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(5).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(6).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(6).png", alt: "Garden Resort" },
+  { src: "/Resort/Cafe/Cafe(7).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(7).png", alt: "Garden Resort" },
+  { src: "/Resort/Poolside/Pool(8).png", alt: "Garden Resort" },
+];
+---
+
+<section
+  class="py-12 px-6 text-white min-h-screen"
+  style="
+    background-image: url('/bg.jpg');
+    background-size: cover;
+    background-position: center;
+  "
+>
+  <div class="max-w-5xl mx-auto space-y-10">
+    <!-- Garden Resort Card -->
+    <div
+      class="flex flex-col md:flex-row bg-gradient-to-r from-yellow-100 to-yellow-200 text-[#0B1A33] rounded-2xl shadow-xl overflow-hidden"
+    >
+      <div class="md:w-1/2">
+        <Swiper
+          options={{
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            loop: true,
+          }}
+        >
+          <SwiperWrapper>
+            {
+              Resortimages.map((image) => (
+                <SwiperSlide>
+                  <div class="w-full h-[468px] overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))
+            }
+          </SwiperWrapper>
+        </Swiper>
+      </div>
+
+      <div class="flex-1 p-6 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Garden Resort</h3>
+          <p class="font-semibold mb-2">Amenities</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Spacious rooms with balconies & scenic views</li>
+            <li>Swimming pool with lounge area</li>
+            <li>Multi-cuisine dining & in-room service</li>
+            <li>Lush green outdoor spaces for relaxation</li>
+            <li>Event & party space (75–100 pax)</li>
+            <li>Airport pickup & drop service</li>
+            <li>24/7 power backup & high-speed Wi-Fi</li>
+            <li>Ample parking space</li>
+            <li>Professional housekeeping & room service</li>
+          </ul>
+        </div>
+
+        <div class="flex justify-end mt-6">
+          <a
+            href="https://wa.me/+919821841112"
+            class="bg-yellow-400 text-[#0B1A33] px-6 py-2 rounded-full font-bold hover:bg-yellow-300 shadow transition"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location Map -->
+    <div class="mt-12 max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold mb-4 text-yellow-400 text-center">
+        Our Location
+      </h3>
+      <div class="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
+        <iframe
+          title="Hotel Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.05412466730337!2d76.99514173232599!3d28.34007227466667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3da2531a6e3b%3A0x169218351b1007fb!2sWILD%20VIEW%20CAFE!5e0!3m2!1sen!2sin!4v1757331092486!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          class="border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

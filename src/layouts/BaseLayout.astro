@@ -1,0 +1,44 @@
+---
+import Navbar from "../components/Navbar.astro";
+import "../styles/globals.css";
+import Footer from "../components/Footer.astro";
+import WhatsAppBubble from "../components/WhatsappWidget.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tanvi Premium Hotels & Resort</title>
+    <meta
+      name="description"
+      content="Tanvi Premium Group offers luxury hotels with premium and deluxe rooms, plus a resort in the heart of Aravali Hills with pool, café, and banquet facilities in Gurugram."
+    />
+
+    <link rel="icon" type="image/png" href="/Logo.png" />
+
+    <meta property="og:title" content="Tanvi Premium Hotels & Resort" />
+    <meta
+      property="og:description"
+      content="Stay in our premium & deluxe hotel rooms or relax at our Aravali Hills resort with pool, café, and banquet facilities."
+    />
+    <meta property="og:image" content="/aboutBG.png" />
+    <meta property="og:url" content="https://tanvipremiumgroup.com/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="author" content="Tanvi Premium Group" />
+    <meta name="email" content="tanvipremiumgroup@gmail.com" />
+    <meta name="telephone" content="+91 9821841113" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tanvipremiumgroup.com/" />
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <Navbar />
+    <slot />
+    <WhatsAppBubble showBadge client:only="react" />
+    <Footer />
+  </body>
+</html>

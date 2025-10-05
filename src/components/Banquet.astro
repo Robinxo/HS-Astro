@@ -1,0 +1,85 @@
+---
+import { Phone } from "@lucide/astro";
+
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+
+const BanquetImages = [
+  {
+    src: "/Banquet/Banquet(1).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(2).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(3).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(4).png",
+    alt: "Garden Resort",
+  },
+  {
+    src: "/Banquet/Banquet(5).png",
+    alt: "Garden Resort",
+  },
+];
+---
+
+<section
+  class="py-12 px-6 text-white min-h-screen"
+  style="background-image: url('/bgcontact.png'); background-size: cover; background-position: center;"
+>
+  <div
+    class="max-w-4xl mx-auto bg-gradient-to-r from-yellow-100 to-yellow-200 text-[#0B1A33] rounded-2xl shadow-xl p-8"
+  >
+    <h3 class="text-2xl font-bold mb-4">Plan Your Event With Us</h3>
+
+    <Swiper
+      options={{
+        autoplay: { delay: 2000, disableOnInteraction: false },
+        loop: true,
+      }}
+    >
+      <SwiperWrapper>
+        {
+          BanquetImages.map((image) => (
+            <SwiperSlide>
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+          ))
+        }
+      </SwiperWrapper>
+    </Swiper>
+
+    <p class="mb-6 mt-6">
+      Our elegant event space can host 75 to 100 guests, ideal for corporate
+      meetings, conferences, intimate weddings, and private parties. Equipped
+      with modern facilities and supported by professional service, we make
+      every occasion memorable.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-6">
+      <a
+        href="https://wa.me/+919821841112"
+        class="flex items-center justify-center gap-2 bg-yellow-400 text-[#0B1A33] px-6 py-3 rounded-lg font-bold shadow hover:bg-yellow-300 transition"
+      >
+        Book now
+      </a>
+
+      <a
+        href="tel:+919821841112"
+        class="flex items-center justify-center gap-2 bg-yellow-400 text-[#0B1A33] px-6 py-3 rounded-lg font-bold shadow hover:bg-yellow-300 transition"
+      >
+        <Phone class="w-5 h-5" />
+        Call Us
+      </a>
+    </div>
+  </div>
+</section>
