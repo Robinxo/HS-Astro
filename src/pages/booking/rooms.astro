@@ -11,6 +11,46 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       name="description"
       content="Stay in style at Tanvi Premium Hotels. Choose from deluxe or premium rooms with modern amenities, comfort, and prime location in Gurugram."
     />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        name: "Tanvi Premium Group — Hotel",
+        url: "https://tanvipremiumgroup.com/rooms",
+        telephone: "+91 9821841113",
+        image: [
+          "https://tanvipremiumgroup.com/Rooms/Premium/Premium(1).png",
+          "https://tanvipremiumgroup.com/Rooms/Deluxe/Deluxe(3).png",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Plot No 38, Block C, Uday Nagar, Sector 45",
+          addressLocality: "Gurugram",
+          addressRegion: "Haryana",
+          postalCode: "122001",
+          addressCountry: "IN",
+        },
+        amenityFeature: [
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Pool",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Café",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Banquet",
+            value: true,
+          },
+        ],
+      })}
+    />
   </head>
+
   <Rooms />
 </BaseLayout>

@@ -11,6 +11,48 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       name="description"
       content="Escape to our resort in Aravali Hills. Relax with pool, cafe, nature views, and premium hospitality by Tanvi Premium Group."
     />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Resort",
+        name: "Tanvi Premium Group — Resort",
+        url: "https://tanvipremiumgroup.com/resort",
+        telephone: "+91 9821841113",
+        image: [
+          "https://tanvipremiumgroup.com/Resort/Poolside/Pool(6).png",
+          "https://tanvipremiumgroup.com/Resort/Poolside/Pool(2).png",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Garat Pur Bas",
+          addressLocality: "Gurugram",
+          addressRegion: "Haryana",
+          postalCode: "122001",
+          addressCountry: "IN",
+        },
+        description:
+          "Resort in the Aravalli hills offering pool, café, nature views, and premium hospitality.",
+        amenityFeature: [
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Pool",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Café",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Nature views",
+            value: true,
+          },
+        ],
+      })}
+    />
   </head>
+
   <Resorts />
 </BaseLayout>

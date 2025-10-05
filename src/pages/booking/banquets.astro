@@ -10,6 +10,47 @@ import Banquet from "../../components/Banquet.astro";
       name="description"
       content="Celebrate weddings, parties, and events at Tanvi Premium Hotels & Resort banquet hall. Spacious, premium service, and perfect for functions."
     />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "EventVenue",
+        name: "Tanvi Premium Group — Banquet Hall",
+        url: "https://tanvipremiumgroup.com/banquet",
+        telephone: "+91 9821841113",
+        image: [
+          "https://tanvipremiumgroup.com/Banquet/Banquet(5).png",
+          "https://tanvipremiumgroup.com/Banquet/Banquet(3).png",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Plot No 38, Block C, Uday Nagar, Sector 45",
+          addressLocality: "Gurugram",
+          addressRegion: "Haryana",
+          postalCode: "122001",
+          addressCountry: "IN",
+        },
+        maximumAttendeeCapacity: 250,
+        amenityFeature: [
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Catering",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Parking",
+            value: true,
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            name: "Decor",
+            value: true,
+          },
+        ],
+      })}
+    />
   </head>
+
   <Banquet />
 </BaseLayout>
