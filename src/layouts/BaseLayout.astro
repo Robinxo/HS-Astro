@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import "../styles/globals.css";
 import Footer from "../components/Footer.astro";
 import WhatsAppBubble from "../components/WhatsappWidget.jsx";
+const { headContent } = Astro.props;
 ---
 
 <html lang="en">
@@ -33,12 +34,15 @@ import WhatsAppBubble from "../components/WhatsappWidget.jsx";
 
     <!-- Canonical -->
     <link rel="canonical" href="https://tanvipremiumgroup.com/" />
+    {headContent}
   </head>
 
   <body class="bg-white text-gray-900">
-    <Navbar />
-    <slot />
-    <WhatsAppBubble showBadge client:only="react" />
+    <header class="sticky top-0 z-50"><Navbar /></header>
+    <main id="page" class="flex-1 min-h-screen">
+      <slot />
+    </main>
+    <WhatsAppBubble client:only="react" />
     <Footer />
   </body>
 </html>

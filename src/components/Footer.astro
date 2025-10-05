@@ -2,7 +2,7 @@
 
 ---
 
-<footer class="bg-[#0B1A33] text-white relative">
+<footer class="bg-[#0B1A33] text-white">
   <!-- Main Content -->
   <div class="mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 font-bricolage">
     <!-- Left Section -->
@@ -24,9 +24,9 @@
       </h3>
       <p class="mt-2">
         Phone:
-        <a href="tel:+919821841112" class="hover:text-blue-400 transition">
-          +91 9821841112
-        </a>
+        <a href="tel:+919821841112" class="hover:text-blue-400 transition"
+          >+91 9821841112</a
+        >
       </p>
       <p>
         Email:
@@ -40,24 +40,30 @@
     </div>
   </div>
 
-  <!-- Back to Top Button -->
-  <div class="absolute right-8 transform -translate-y-1/2">
-    <button
-      id="back-to-top"
-      class="bg-pink-200 text-black p-3 rounded shadow hover:bg-pink-300 transition"
-    >
-      ↑
-    </button>
-  </div>
-
   <!-- Bottom Bar -->
   <div class="bg-[#0B1A33] text-center py-3 text-sm text-white font-bricolage">
     © 2025 Tanvi group. All Rights Reserved.
   </div>
 </footer>
 
+<!-- Back to Top Button (fixed, not absolute in footer) -->
+<button
+  id="back-to-top"
+  class="fixed bottom-6 right-6 z-40 bg-pink-200 text-black p-3 rounded shadow hover:bg-pink-300 transition"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+
 <script>
   const backToTopBtn = document.querySelector("#back-to-top");
+  const toggleBtn = () => {
+    // Show after some scroll so it doesn't block content at the start
+    if (window.scrollY > 400) backToTopBtn?.classList.remove("hidden");
+    else backToTopBtn?.classList.add("hidden");
+  };
+  toggleBtn();
+  window.addEventListener("scroll", toggleBtn);
   backToTopBtn?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });

@@ -1,11 +1,10 @@
 ---
 import Resorts from "../../components/Resorts.astro";
-
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <head>
+  <Fragment slot="head">
     <title>Luxury Resort in Aravali Hills | Tanvi Premium Group</title>
     <meta
       name="description"
@@ -52,7 +51,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         ],
       })}
     />
-  </head>
+  </Fragment>
 
   <Resorts />
 </BaseLayout>
