@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
 ---
 
 <section
-  class="text-yellow-400 px-6 pt-15 py-86 md:px-16 lg:px-24"
-  style="background-image: url('/bgcontact.png'); background-size: cover; background-position: center;"
+  class="text-yellow-400 px-6 md:px-16 lg:px-24 py-20 min-h-screen bg-cover bg-center bg-no-repeat"
+  style="background-image: url('/bgcontact.png');"
 >
   <div class="mb-10 font-bricolage text-center">
     <h2 class="text-2xl md:text-4xl font-bold">
@@ -22,7 +22,7 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
   <div class="space-y-8 max-w-2xl text-left">
     <!-- Phone -->
     <div class="flex items-start gap-4">
-      <Phone class="w-6 h-6 text-yellow-400 flex-shrink-0" />
+      <Phone class="w-6 h-6 text-yellow-400 flex-shrink1" />
       <div>
         <h3 class="font-semibold text-lg">Phone:</h3>
         <p class="text-gray-200">
@@ -42,7 +42,7 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
           For inquiries or reservations, email us at
           <a
             href="mailto:tanvipremiumgroup@gmail.com"
-            class="underline text-yellow-300"
+            class="underline text-yellow-300 pb-10"
           >
             tanvipremiumgroup@gmail.com
           </a>
@@ -60,7 +60,7 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
           <a
             href="https://www.instagram.com/"
             target="_blank"
-            class="underline text-yellow-300"
+            class="underline text-yellow-300 pt-10"
           >
             @tanvipremiumgroup
           </a>
@@ -81,7 +81,7 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
           href="https://maps.app.goo.gl/C5jaP8shxVBvjhZg9"
           target="_blank"
           rel="noopener noreferrer"
-          class="block mt-1 underline text-yellow-300"
+          class="block mt-1 underline text-yellow-300 pb-10"
         >
           Find us near ISKCON Temple Gurugram Sec-45
         </a>
@@ -93,7 +93,7 @@ import { Phone, Mail, MapPin, Instagram } from "@lucide/astro";
           href="https://maps.app.goo.gl/t8ogxPhSt3KScoda9"
           target="_blank"
           rel="noopener noreferrer"
-          class="block mt-1 underline text-yellow-300"
+          class="block mt-1 underline text-yellow-300 pb-20"
         >
           Find us here
         </a>

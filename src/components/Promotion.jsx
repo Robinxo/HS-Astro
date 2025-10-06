@@ -12,7 +12,7 @@ const cards = [
   },
   {
     id: 2,
-    img: "/aboutBG.png",
+    img: "/Rooms/Premium/Premium(3).png",
     title: "Luxury Living",
     desc: "Enjoy premium comfort with our modern facilities in Gurgaon.",
     ribbon: "Book Now",
@@ -59,7 +59,7 @@ export default function PromoCarousel() {
               <img
                 src={card.img}
                 alt={card.title}
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-cover object-[20%_70%]"
               />
 
               {/* Content */}
