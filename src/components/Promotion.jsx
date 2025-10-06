@@ -5,10 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 const cards = [
   {
     id: 1,
-    img: "/aboutBG.png",
+    img: "/Banquet/Banquet(5).png",
     title: "Flexible Customization",
     desc: "Make your own package with flexible times, Meals, Transport, Banquets, Conference & Meeting rooms in Gurgaon.",
     ribbon: "Chat Now",
+    className: "w-full h-80 object-cover ",
   },
   {
     id: 2,
@@ -16,13 +17,15 @@ const cards = [
     title: "Luxury Living",
     desc: "Enjoy premium comfort with our modern facilities in Gurgaon.",
     ribbon: "Book Now",
+    className: "w-full h-80 object-cover object-[20%_70%]",
   },
   {
     id: 3,
-    img: "/aboutBG.png",
+    img: "/ExclusiveOFFERS.png",
     title: "Exclusive Offers",
     desc: "Grab the latest limited-time deals crafted just for you.",
     ribbon: "Offer",
+    className: "w-full h-80 object-cover",
   },
 ];
 
@@ -56,11 +59,7 @@ export default function PromoCarousel() {
               )}
 
               {/* Image */}
-              <img
-                src={card.img}
-                alt={card.title}
-                className="w-full h-80 object-cover object-[20%_70%]"
-              />
+              <img src={card.img} alt={card.title} className={card.className} />
 
               {/* Content */}
               <div className="flex-1 flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b from-white/90 to-white">
