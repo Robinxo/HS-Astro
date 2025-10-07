@@ -43,14 +43,14 @@ export default function PromoCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-9xl mx-auto bg-[#0B1A33] overflow-hidden py-8">
-      <h1 className="text-yellow-300 font-bold text-5xl font-bricolage  py-10 px-10">
+    <div className="relative w-full max-w-9xl mx-auto bg-[#d2b48c] overflow-hidden py-8">
+      <h1 className="text-[#212842] font-bold text-5xl font-bricolage  py-10 px-10">
         EXCLUSIVELY FOR YOU
       </h1>
       <Slider {...settings}>
         {cards.map((card) => (
           <div key={card.id} className="px-2">
-            <div className="relative flex flex-col rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="relative flex flex-col rounded-lg overflow-hidden shadow-lg bg-[#8b7355]">
               {/* Ribbon */}
               {card.ribbon && (
                 <div className="absolute top-4 right-[-40px] rotate-45 bg-red-600 text-white text-xs font-bold px-12 py-1 shadow-md">
@@ -62,11 +62,11 @@ export default function PromoCarousel() {
               <img src={card.img} alt={card.title} className={card.className} />
 
               {/* Content */}
-              <div className="flex-1 flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b from-white/90 to-white">
+              <div className="flex-1 flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b bg-[#8b7355]">
                 <h3 className="text-2xl font-semibold text-gray-800">
                   {card.title}
                 </h3>
-                <p className="text-gray-600 mt-3">{card.desc}</p>
+                <p className="text-white mt-3">{card.desc}</p>
                 <button className="mt-6 px-6 py-2 bg-yellow-500 text-gray-900 font-semibold rounded hover:bg-yellow-600 transition">
                   <a href="https://wa.me/+919821841112">Drop a message now!</a>
                 </button>

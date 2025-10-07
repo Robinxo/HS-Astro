@@ -63,23 +63,29 @@ const Premiumimages = [
 
 <!-- Hero -->
 <section
-  class="relative flex flex-col items-center justify-center text-white flex-1 bg-cover bg-top min-h-[calc(100vh-64px)]"
-  style="background-image: url('/bg.jpg');"
+  class="relative flex flex-col items-center justify-center text-white flex-1 min-h-[calc(70vh-64px)] bg-top overflow-hidden"
 >
+  <div
+    class="absolute inset-0 bg-[url('/ExclusiveOFFERS.png')] bg-cover bg-top scale-105 transition-transform duration-700 ease-in-out"
+  >
+  </div>
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
   <div
     class="relative z-10 text-center px-4 sm:px-6 md:px-8 py-12 font-bricolage"
   >
     <h1
-      class="text-4xl md:text-6xl font-bold text-yellow-400 drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)]"
+      class="text-4xl md:text-6xl font-bold text-[#d2b48c] drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)]"
     >
       TANVI GROUP
     </h1>
     <h2
-      class="text-6xl md:text-9xl font-extrabold text-yellow-400 drop-shadow-[4px_2px_0px_rgba(0,0,0,0.8)] mb-4"
+      class="text-6xl md:text-9xl font-extrabold text-[#d2b48c] drop-shadow-[4px_2px_0px_rgba(0,0,0,0.8)] mb-4"
     >
       Hotels & Resort
     </h2>
-    <p class="block text-lg md:text-xl max-w-4xs mx-auto mt-4 text-yellow-400">
+    <p class="block text-lg md:text-xl max-w-4xs mx-auto mt-4 text-[#d2b48c]">
       At <strong>Tanvi Premium</strong>, we offer more than just a place to stay
       — we create experiences defined by comfort, care, and heartfelt
       hospitality. Whether you're traveling for business or leisure, our
@@ -88,7 +94,7 @@ const Premiumimages = [
       <em>— Director, Tanvi Premium Hotel & Resort</em>
     </p>
     <div
-      class="w-24 md:w-60 h-1 bg-yellow-400 mx-auto mb-8 drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)]"
+      class="w-24 md:w-60 h-1 bg-[#d2b48c] mx-auto mb-8 drop-shadow-[3px_2px_0px_rgba(0,0,0,0.8)] mt-3"
     >
     </div>
     <a
@@ -99,23 +105,22 @@ const Premiumimages = [
     </a>
   </div>
 </section>
-
 <div
-  class="min-h-64 bg-[#0a1a36] flex flex-col items-center relative border-b-8 border-yellow-400"
+  class="min-h-64 bg-[#d2b48c] flex flex-col items-center relative border-b-8 border-[#8b7355]"
 >
   <!-- Hotel Section -->
   <div
-    class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center border-t-8 border-yellow-400"
+    class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center border-t-8 border-[#8b7355]"
   >
     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      <span class="hidden md:block w-24 h-[3px] bg-[#212842] rounded-full"
       ></span>
       <h2
-        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+        class="text-[#212842] text-3xl sm:text-3xl md:text-4xl font-bold tracking-widest font-ken"
       >
         TANVI GROUP HOTEL
       </h2>
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      <span class="hidden md:block w-24 h-[3px] rounded-full bg-[#212842]"
       ></span>
     </div>
   </div>
@@ -124,9 +129,9 @@ const Premiumimages = [
     class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center"
   >
     <!-- Premium Room -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper
@@ -154,7 +159,7 @@ const Premiumimages = [
           </Swiper>
         </div>
         <p class="text-lg sm:text-xl font-bold text-left mt-3">PREMIUM ROOM</p>
-        <div class="text-sm sm:text-base mt-1 px-2 text-left">
+        <div class="text-sm sm:text-base mt-1 px-2 text-left text-white">
           <p>
             Indulge in the ultimate luxury with our Premium Rooms, offering
             unmatched comfort and sophisticated style.
@@ -169,9 +174,9 @@ const Premiumimages = [
     </div>
 
     <!-- Deluxe Room -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper
@@ -199,7 +204,7 @@ const Premiumimages = [
           </Swiper>
         </div>
         <p class="text-lg sm:text-xl font-bold text-left mt-3">DELUXE ROOM</p>
-        <div class="text-sm sm:text-base mt-1 px-2 text-left">
+        <div class="text-sm sm:text-base mt-1 px-2 text-left text-white">
           <p>
             Unwind in the spacious and elegantly designed Deluxe Rooms, where
             comfort meets modern sophistication.
@@ -221,14 +226,14 @@ const Premiumimages = [
     class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center"
   >
     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      <span class="hidden md:block w-24 h-[3px] bg-[#212842] rounded-full"
       ></span>
       <h2
-        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+        class="text-[#212842] text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-ken"
       >
         TANVI GROUP RESORT
       </h2>
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      <span class="hidden md:block w-24 h-[3px] bg-[#212842] rounded-full"
       ></span>
     </div>
   </div>
@@ -237,9 +242,10 @@ const Premiumimages = [
     class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center"
   >
     <!-- Resort -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
@@ -263,7 +269,7 @@ const Premiumimages = [
         </div>
         <p class="text-lg sm:text-xl font-bold text-left mt-3">RESORT</p>
         <ul
-          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left text-white"
         >
           <li>Escape to paradise where luxury meets nature.</li>
           <li>Indulge in tranquility and adventure at our resort.</li>
@@ -277,9 +283,10 @@ const Premiumimages = [
     </div>
 
     <!-- Cafe -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
@@ -303,7 +310,7 @@ const Premiumimages = [
         </div>
         <p class="text-lg sm:text-xl font-bold text-left mt-3">CAFE</p>
         <ul
-          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left text-white"
         >
           <li>Savor every sip with panoramic views of the Aravalli Hills.</li>
           <li>
@@ -327,14 +334,15 @@ const Premiumimages = [
     class="relative z-10 w-full flex justify-center items-center py-6 md:py-10 px-4 text-center"
   >
     <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6">
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+      <span class="hidden md:block w-24 h-[3px] bg-[#212842] rounded-full"
       ></span>
       <h2
-        class="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-bricolage"
+        class="text-[#212842] text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-widest font-ken"
       >
         TANVI GROUP BANQUET
       </h2>
-      <span class="hidden md:block w-24 h-[3px] bg-yellow-400 rounded-full"
+
+      <span class="hidden md:block w-24 h-[3px] bg-[#212842] rounded-full"
       ></span>
     </div>
   </div>
@@ -343,9 +351,10 @@ const Premiumimages = [
     class="relative z-10 rounded-3xl p-1 flex flex-col md:flex-row gap-6 md:gap-4 w-11/12 max-w-7xl font-bricolage justify-center pb-5"
   >
     <!-- Banquet Halls -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
@@ -369,7 +378,7 @@ const Premiumimages = [
         </div>
         <p class="text-lg sm:text-xl font-bold text-left mt-3">BANQUET HALLS</p>
         <ul
-          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left text-white"
         >
           <li>
             Host your next meeting or gathering in our elegant banquet hall.
@@ -385,9 +394,10 @@ const Premiumimages = [
     </div>
 
     <!-- Rooftop Banquet -->
-    <div class="bg-yellow-400 rounded-2xl p-2 w-full md:w-1/3 text-center">
+
+    <div class="bg-[#8b7355] rounded-2xl p-2 w-full md:w-1/3 text-center">
       <div
-        class="bg-[#0a1a36] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
+        class="bg-[#8b7355] flex flex-col items-center rounded-2xl py-4 px-2 text-yellow-400"
       >
         <div class="w-full aspect-square bg-white rounded-2xl overflow-hidden">
           <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
@@ -413,7 +423,7 @@ const Premiumimages = [
           ROOFTOP BANQUET
         </p>
         <ul
-          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left"
+          class="list-disc pl-6 text-sm sm:text-base space-y-1 mt-1 px-2 text-left text-white"
         >
           <li>
             Enjoy breathtaking rooftop views in a vibrant open-air atmosphere.
