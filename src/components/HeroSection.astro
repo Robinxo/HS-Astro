@@ -47,6 +47,24 @@ const BanquetImages = [
     alt: "Garden Resort",
   },
 ];
+const RooftopImages = [
+  {
+    src: "/Banquet/Rooftop(1).png",
+    alt: "Rooftop banquet",
+  },
+  {
+    src: "/Banquet/Rooftop(2).png",
+    alt: "Rooftop banquet",
+  },
+  {
+    src: "/Banquet/Rooftop(3).png",
+    alt: "Rooftop banquet",
+  },
+  {
+    src: "/Banquet/Rooftop(4).png",
+    alt: "Rooftop banquet",
+  },
+];
 
 const Deluxeimages = [
   { src: "/Rooms/Deluxe/Deluxe(1).png", alt: "Deluxe Room" },
@@ -408,7 +426,7 @@ const Premiumimages = [
           <Swiper options={{ autoplay: { delay: 2000 }, loop: true }}>
             <SwiperWrapper>
               {
-                BanquetImages.map((image) => (
+                RooftopImages.map((image) => (
                   <SwiperSlide>
                     <div class="w-full h-[468px] overflow-hidden">
                       <img
