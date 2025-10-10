@@ -3,14 +3,120 @@ import Navbar from "../components/Navbar.astro";
 import "../styles/globals.css";
 import Footer from "../components/Footer.astro";
 import WhatsAppBubble from "../components/WhatsappWidget.jsx";
+
 const { headContent } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tanvi Premium Group",
+  "url": "https://tanvipremiumgroup.com",
+  "telephone": "+919821841113",
+  "description": "Discover Tanvi Premium Hotels & Resort in Gurugram. Premium & deluxe rooms, resort in Aravali Hills with pool & cafe, plus banquet hall for events.",
+  "logo": "https://tanvipremiumgroup.com/Logo.png",
+  "department": [
+    {
+      "@type": "Hotel",
+      "name": "Tanvi Premium Hotel",
+      "image": "https://tanvipremiumgroup.com/Rooms/Premium/Premium(1).png",
+      "description": "Premium hotel in Gurugram offering deluxe and premium rooms with modern amenities, located in Sector 45.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No 38, Block C, Uday Nagar, Sector 45",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.4352871",
+        "longitude": "77.0731182"
+      },
+      "telephone": "+919821841113",
+      "priceRange": "₹3500 - ₹8000 per night",
+      "checkinTime": "14:00",
+      "checkoutTime": "11:00",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Television", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Balcony", "value": true }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Room",
+            "name": "Deluxe Room",
+            "description": "Spacious air-conditioned room with Wi-Fi, TV, and private balcony.",
+            "bed": "Queen",
+            "occupancy": { "@type": "QuantitativeValue", "value": 2 }
+          },
+          "priceCurrency": "INR",
+          "price": "3500",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Room",
+            "name": "Premium Room",
+            "description": "Elegant premium room featuring all deluxe amenities plus a mini fridge for extra comfort.",
+            "bed": "King",
+            "occupancy": { "@type": "QuantitativeValue", "value": 2 }
+          },
+          "priceCurrency": "INR",
+          "price": "4500",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    {
+      "@type": "Resort",
+      "name": "Tanvi Premium Resort",
+      "image": "https://tanvipremiumgroup.com/Resort/Resort(1).png",
+      "description": "Resort in Aravali Hills, Gurugram — perfect for weekend getaways, events, and family stays with pool, cafe, and banquet hall.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Garat Pur Bas",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.3400722",
+        "longitude": "76.9951417"
+      },
+      "telephone": "+919821841113",
+      "priceRange": "₹3500 - ₹8000 per night",
+      "checkinTime": "14:00",
+      "checkoutTime": "11:00",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Swimming Pool", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Banquet Hall", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Cafe", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true }
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/tanvipremiumgroup",
+    "https://www.instagram.com/tanvipremiumgroup"
+  ]
+};
 ---
 
 <html lang="en">
   <head>
+    <!-- ✅ Place this script tag just after opening <head> -->
+    <script type="application/ld+json">{JSON.stringify(schema)}</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" type="image/png" href="/Logo.png" />
     <link rel="apple-touch-icon" href="/Logo.png" />
 
@@ -23,7 +129,6 @@ const { headContent } = Astro.props;
     <meta name="email" content="tanvipremiumgroup@gmail.com" />
     <meta name="telephone" content="+91 9821841113" />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://tanvipremiumgroup.com/" />
     {headContent}
   </head>
